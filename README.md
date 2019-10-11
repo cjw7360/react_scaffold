@@ -6,7 +6,7 @@
 * Router : `react-router-dom` .
 * CSS Load on demand : `babel-plugin-import` .
 * UI Component library : `Ant Design` .
-* Mobile client VM-Layout : `postCss` 
+* Mobile client VM-Layout : `postCss` .
 ---
 ## 2. CRA overrides
 Use `react-app-rewired` and `customize-cra` .
