@@ -1,9 +1,15 @@
 const {
     override,
     fixBabelImports,
-    addWebpackAlias
+    addWebpackAlias,
+    addPostcssPlugins
 } = require("customize-cra");
 const path = require("path");
+
+const postcss = require("./postcss.config.js");
+// postcss 配置项
+const postcssPlugin = Object.keys(postcss).map(key => require(key)(postcss[key]));
+
 
 module.exports = override(
 
@@ -17,5 +23,5 @@ module.exports = override(
         libraryDirectory: 'es',
         style: 'css',
     }),
-
+    addPostcssPlugins(postcssPlugin)
 );
